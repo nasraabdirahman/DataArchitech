@@ -1,6 +1,6 @@
-````
+
 ### ex1
-````
+
 Generating '/tmp/nsys-report-d4b7.qdstrm'
 [1/7] [========================100%] report2.nsys-rep
 [2/7] [========================100%] report2.sqlite
