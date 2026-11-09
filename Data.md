@@ -40,4 +40,34 @@ Generated:
     /home/hpc25/Documents/jetson19/Lab2/report2.nsys-rep
     /home/hpc25/Documents/jetson19/Lab2/report2.sqlite
 
-    
+### ex2
+Collecting data...
+NvMapMemAllocInternalTagged: 1075072515 error 12
+NvMapMemHandleAlloc: error 0
+NvMapMemAllocInternalTagged: 1075072515 error 12
+NvMapMemHandleAlloc: error 0
+Max error: 6
+Generating '/tmp/nsys-report-8f50.qdstrm'
+[1/7] [========================100%] report3.nsys-rep
+[2/7] [========================100%] report3.sqlite
+[3/7] Executing 'nvtx_sum' stats report
+SKIPPED: /home/hpc25/Documents/jetson19/Lab2/report3.sqlite does not contain NV Tools Extension (NVTX) data.
+[4/7] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)       Med (ns)      Min (ns)     Max (ns)    StdDev (ns)            Name         
+ --------  ---------------  ---------  -------------  -------------  -----------  -----------  ------------  ----------------------
+     41,0      352 533 280          1  352 533 280,0  352 533 280,0  352 533 280  352 533 280           0,0  cudaLaunchKernel      
+     38,0      330 437 184          3  110 145 728,0  108 730 208,0   74 299 680  147 407 296  36 574 357,0  cudaMalloc            
+     19,0      165 924 288          3   55 308 096,0   77 332 736,0       24 672   88 566 880  48 205 230,0  cudaMemcpy            
+      0,0          132 928          3       44 309,0        1 344,0          512      131 072      75 139,0  cudaFree              
+      0,0            3 936          1        3 936,0        3 936,0        3 936        3 936           0,0  cuModuleGetLoadingMode
+
+[5/7] Executing 'cuda_gpu_kern_sum' stats report
+SKIPPED: /home/hpc25/Documents/jetson19/Lab2/report3.sqlite does not contain CUDA kernel data.
+[6/7] Executing 'cuda_gpu_mem_time_sum' stats report
+SKIPPED: /home/hpc25/Documents/jetson19/Lab2/report3.sqlite does not contain GPU memory data.
+[7/7] Executing 'cuda_gpu_mem_size_sum' stats report
+SKIPPED: /home/hpc25/Documents/jetson19/Lab2/report3.sqlite does not contain GPU memory data.
+Generated:
+    /home/hpc25/Documents/jetson19/Lab2/report3.nsys-rep
+    /home/hpc25/Documents/jetson19/Lab2/report3.sqlite
