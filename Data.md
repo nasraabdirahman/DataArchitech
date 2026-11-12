@@ -387,3 +387,36 @@ Generated:
    64     5.29       101.5     0.76       709.7      7.0         0
   256    18.91       113.6     1.68      1281.0     11.3         0
  1024    69.76       123.1     5.72      1500.8     12.2         0
+
+ ### ex5(zerocopy)
+ 
+Collecting data...
+Max error: 0
+Generating '/tmp/nsys-report-8b8e.qdstrm'
+[1/7] [========================100%] report35.nsys-rep
+[2/7] [========================100%] report35.sqlite
+[3/7] Executing 'nvtx_sum' stats report
+SKIPPED: /home/hpc25/Documents/jetson19/Lab2/report35.sqlite does not contain NV Tools Extension (NVTX) data.
+[4/7] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)      Med (ns)     Min (ns)    Max (ns)   StdDev (ns)            Name         
+ --------  ---------------  ---------  ------------  ------------  ----------  ----------  ------------  ----------------------
+     67,0      147 649 952          3  49 216 650,0  57 794 080,0  14 123 520  75 732 352  31 687 399,0  cudaHostAlloc         
+     26,0       57 296 672          3  19 098 890,0  19 035 968,0  18 569 664  19 691 040     563 329,0  cudaFreeHost          
+      5,0       11 990 336          1  11 990 336,0  11 990 336,0  11 990 336  11 990 336           0,0  cudaDeviceSynchronize 
+      0,0          973 728          1     973 728,0     973 728,0     973 728     973 728           0,0  cudaLaunchKernel      
+      0,0            2 016          1       2 016,0       2 016,0       2 016       2 016           0,0  cuModuleGetLoadingMode
+
+[5/7] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances    Avg (ns)      Med (ns)     Min (ns)    Max (ns)   StdDev (ns)                     Name                   
+ --------  ---------------  ---------  ------------  ------------  ----------  ----------  -----------  ------------------------------------------
+    100,0       11 963 488          1  11 963 488,0  11 963 488,0  11 963 488  11 963 488          0,0  multKernel(int, float *, float *, float *)
+
+[6/7] Executing 'cuda_gpu_mem_time_sum' stats report
+SKIPPED: /home/hpc25/Documents/jetson19/Lab2/report35.sqlite does not contain GPU memory data.
+[7/7] Executing 'cuda_gpu_mem_size_sum' stats report
+SKIPPED: /home/hpc25/Documents/jetson19/Lab2/report35.sqlite does not contain GPU memory data.
+Generated:
+    /home/hpc25/Documents/jetson19/Lab2/report35.nsys-rep
+    /home/hpc25/Documents/jetson19/Lab2/report35.sqlite
