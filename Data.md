@@ -294,7 +294,7 @@ SKIPPED: /home/hpc25/Documents/jetson19/Lab2/report26.sqlite does not contain NV
 Generated:
     /home/hpc25/Documents/jetson19/Lab2/report26.nsys-rep
     /home/hpc25/Documents/jetson19/Lab2/report26.sqlite
-### ex4
+### ex4(with shuffle)
 
 Collecting data...
 Max error: 0
@@ -336,3 +336,45 @@ SKIPPED: /home/hpc25/Documents/jetson19/Lab2/report30.sqlite does not contain NV
 Generated:
     /home/hpc25/Documents/jetson19/Lab2/report30.nsys-rep
     /home/hpc25/Documents/jetson19/Lab2/report30.sqlite
+### ex4(without shuffle)
+
+Collecting data...
+Max error: 0
+Generating '/tmp/nsys-report-1467.qdstrm'
+[1/7] [========================100%] report33.nsys-rep
+[2/7] [========================100%] report33.sqlite
+[3/7] Executing 'nvtx_sum' stats report
+SKIPPED: /home/hpc25/Documents/jetson19/Lab2/report33.sqlite does not contain NV Tools Extension (NVTX) data.
+[4/7] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)      Med (ns)     Min (ns)    Max (ns)    StdDev (ns)            Name         
+ --------  ---------------  ---------  ------------  ------------  ----------  -----------  ------------  ----------------------
+     61,0      284 078 496          4  71 019 624,0  35 015 776,0  34 943 168  179 103 776  72 056 123,0  cudaMemcpy            
+     30,0      143 329 344          4  35 832 336,0  28 114 720,0  11 747 456   75 352 448  30 241 085,0  cudaMalloc            
+      8,0       37 105 216          4   9 276 304,0   8 307 872,0   8 131 200   12 358 272   2 057 565,0  cudaFree              
+      0,0          931 200          1     931 200,0     931 200,0     931 200      931 200           0,0  cudaLaunchKernel      
+      0,0            2 176          1       2 176,0       2 176,0       2 176        2 176           0,0  cuModuleGetLoadingMode
+
+[5/7] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances    Avg (ns)      Med (ns)     Min (ns)    Max (ns)   StdDev (ns)                        Name                       
+ --------  ---------------  ---------  ------------  ------------  ----------  ----------  -----------  -------------------------------------------------
+    100,0       17 622 496          1  17 622 496,0  17 622 496,0  17 622 496  17 622 496          0,0  multKernel(int, float *, float *, float *, int *)
+
+[6/7] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count    Avg (ns)       Med (ns)      Min (ns)     Max (ns)    StdDev (ns)           Operation          
+ --------  ---------------  -----  -------------  -------------  -----------  -----------  -----------  ----------------------------
+     60,0      160 315 072      1  160 315 072,0  160 315 072,0  160 315 072  160 315 072          0,0  [CUDA memcpy Device-to-Host]
+     39,0      104 417 696      3   34 805 898,0   34 791 552,0   34 790 400   34 835 744     25 853,0  [CUDA memcpy Host-to-Device]
+
+[7/7] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+ 805,306         3  268,435   268,435   268,435   268,435   0,000        [CUDA memcpy Host-to-Device]
+ 268,435         1  268,435   268,435   268,435   268,435   0,000        [CUDA memcpy Device-to-Host]
+
+Generated:
+    /home/hpc25/Documents/jetson19/Lab2/report33.nsys-rep
+    /home/hpc25/Documents/jetson19/Lab2/report33.sqlite
