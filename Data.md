@@ -167,7 +167,7 @@ SKIPPED: /home/hpc25/Documents/jetson19/Lab2/report22.sqlite does not contain NV
 Generated:
     /home/hpc25/Documents/jetson19/Lab2/report22.nsys-rep
     /home/hpc25/Documents/jetson19/Lab2/report22.sqlite
-###ex2(1024)
+### ex2(1024)
 
 Collecting data...
 Max error: 0
