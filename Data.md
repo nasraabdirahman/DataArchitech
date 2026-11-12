@@ -378,3 +378,12 @@ SKIPPED: /home/hpc25/Documents/jetson19/Lab2/report33.sqlite does not contain NV
 Generated:
     /home/hpc25/Documents/jetson19/Lab2/report33.nsys-rep
     /home/hpc25/Documents/jetson19/Lab2/report33.sqlite
+### ex5
+
+    K   CPU ms CPU GFLOP/s   GPU ms GPU GFLOP/s  GPU/CPU  max diff
+    1     1.13         7.4     0.53        15.8      2.1         0
+    4     1.06        31.7     0.53        62.8      2.0         0
+   16     2.27        59.2     0.57       235.7      4.0         0
+   64     5.29       101.5     0.76       709.7      7.0         0
+  256    18.91       113.6     1.68      1281.0     11.3         0
+ 1024    69.76       123.1     5.72      1500.8     12.2         0
