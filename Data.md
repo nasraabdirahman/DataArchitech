@@ -420,3 +420,18 @@ SKIPPED: /home/hpc25/Documents/jetson19/Lab2/report35.sqlite does not contain GP
 Generated:
     /home/hpc25/Documents/jetson19/Lab2/report35.nsys-rep
     /home/hpc25/Documents/jetson19/Lab2/report35.sqlite
+
+### ex5_zerocopy(time)
+
+Max error: 0
+
+real    0m1,662s
+user    0m1,298s
+sys     0m0,342s
+
+### ex3 (time)
+Max error: 0
+
+real    0m1,856s
+user    0m1,177s
+sys     0m0,635s
