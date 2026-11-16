@@ -146,3 +146,41 @@ Generated:
 Generated:
     /home/hpc25/Documents/jetson19/Lab3/report6.nsys-rep
     /home/hpc25/Documents/jetson19/Lab3/report6.sqlite
+### ex2(8x8)
+
+[4/7] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls   Avg (ns)     Med (ns)    Min (ns)    Max (ns)   StdDev (ns)               Name            
+ --------  ---------------  ---------  -----------  -----------  ---------  ----------  ------------  ----------------------------
+     46,0       86 796 640         12  7 233 053,0    430 864,0      7 552  82 809 504  23 801 975,0  cudaHostAlloc            
+     22,0       42 647 648         98    435 180,0    280 704,0    179 904  11 725 408   1 169 483,0  cudaGraphicsMapResources    
+     18,0       34 670 112        196    176 888,0    150 384,0     26 720   2 049 376     206 647,0  cudaLaunchKernel            
+      6,0       11 750 560         98    119 903,0    118 640,0     66 784     218 656      20 303,0  cudaMemcpyAsync            
+      5,0       10 302 944         98    105 132,0     82 032,0     45 952     943 072     105 388,0  cudaGraphicsUnmapResources  
+      0,0        1 762 496          1  1 762 496,0  1 762 496,0  1 762 496   1 762 496           0,0  cudaGraphicsGLRegisterBuffer
+      0,0          217 600        413        526,0        288,0        160      15 200         881,0  cuGetProcAddress_v2         
+      0,0            9 184          1      9 184,0      9 184,0      9 184       9 184           0,0  cuInit            
+      0,0            7 904          2      3 952,0      3 952,0      1 088       6 816       4 050,0  cuModuleGetLoadingMode      
+
+[5/7] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)           Name                                   
+ --------  ---------------  ---------  ---------  ---------  --------  --------  -----------  --------------------------------------------------------------------------
+     52,0       77 611 168         97  800 115,0  802 176,0   324 864   895 520     61 620,0  rgb2grayKernel(uchar4 *, int, int)                                        
+     47,0       70 032 704         98  714 619,0  718 816,0   322 560   782 592     47 705,0  void I420ToRGB<uchar4, (bool)0>(unsigned char *, int, T1 *, int, int, int)
+
+[6/7] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)           Operation          
+ --------  ---------------  -----  ---------  ---------  --------  --------  -----------  ----------------------------
+    100,0       46 940 288     97  483 920,0  469 504,0   195 136   608 832     57 789,0  [CUDA memcpy Host-to-Device]
+
+[7/7] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+ 357,581        97  3,686     3,686     3,686     3,686     0,000        [CUDA memcpy Host-to-Device]
+
+Generated:
+    /home/hpc25/Documents/jetson19/Lab3/report7.nsys-rep
+    /home/hpc25/Documents/jetson19/Lab3/report7.sqlite
