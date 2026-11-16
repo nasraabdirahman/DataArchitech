@@ -21,8 +21,10 @@ int main( int argc, char** argv )
             continue;
             break; // EOS
         }
+        int width = input->GetWidth();
+        int height = input->GetHeight();
         auto start = std::chrono::high_resolution_clock::now();
-        for(int i = 0; i < 10; i++)
+        for(int i = 0; i < width * height; i++)
         {   
             float gray = 0.299f *image[i].x + 0.587f *image[i].y + 0.114f * image[i].z;
             image[i].x = gray;
