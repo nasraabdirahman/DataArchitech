@@ -49,17 +49,15 @@ int height, int max_freq)
         int freq = histogram[index] * 256 / max_freq;
         for (int i = 0; i < 256; i++)
         {
-            int row = height - i - 1;
-            if (i <= freq)
-            {
-                image[row * width + 2*index] = white_pixel;
-                image[row * width + 2*index+1] = white_pixel;
-            }
-            else
-            {
-                image[row * width + 2*index] = black_pixel;
-                image[row * width + 2*index+1] = black_pixel;
-            }
+        int row = height - i - 1;
+
+    for (int j = 0; j < 2; j++)
+    {
+        int pos = row * width + 2 * index + j;
+        uchar4 original = image[pos];
+        uchar4 color = (i <= freq) ? white_pixel : black_pixel;
+        image[pos] = make_uchar4((original.x + color.x) / 2,(original.y + color.y) / 2,(original.z + color.z) / 2,255);
+    }
         }
     }
 }
